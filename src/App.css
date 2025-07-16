@@ -1,42 +1,113 @@
-#root {
-  max-width: 1280px;
+/* Global layout */
+.main-container {
+  max-width: 768px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #0f172a;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.new-button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.card {
-  padding: 2em;
+.new-button:hover {
+  background-color: #2563eb;
 }
 
-.read-the-docs {
-  color: #888;
+/* Notes list */
+.notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual note */
+.note-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.2s ease;
+}
+
+.note-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Note content */
+.note-text {
+  flex: 1;
+  font-size: 1rem;
+  color: #1e293b;
+  text-align: left;
+  word-break: break-word;
+  padding-right: 1rem;
+}
+
+/* Action buttons */
+.note-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.note-btn {
+  padding: 0.4em 0.8em;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #f1f5f9;
+  color: #1e3a8a;
+  transition: background 0.2s ease;
+}
+
+.note-btn:hover {
+  background-color: #e0e7ff;
+}
+
+/* Footer */
+.footer {
+  margin-top: 3rem;
+}
+
+.signout-button {
+  background-color: #ef4444;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.signout-button:hover {
+  background-color: #dc2626;
 }
