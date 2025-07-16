@@ -85,7 +85,7 @@
   cursor: pointer;
   background-color: #f1f5f9;
   color: #1e3a8a;
-  transition: background 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .note-btn:hover {
