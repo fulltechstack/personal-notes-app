@@ -11,10 +11,10 @@ function App() {
   const { user, signOut } = useAuthenticator();
 
   useEffect(() => {
-    const subscription = client.models.Todo.observeQuery().subscribe({
+    client.models.Todo.observeQuery().subscribe({
       next: (data) => setTodos([...data.items]),
     });
-    return () => subscription.unsubscribe();
+
   }, []);
 
   function createTodo() {
